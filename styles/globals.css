@@ -14,3 +14,9 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.tick-flip {
+  border-radius: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
