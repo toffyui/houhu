@@ -1,4 +1,4 @@
-import { Canvas, createCanvas, registerFont, loadImage } from "canvas";
+import { Canvas, createCanvas, loadImage, registerFont } from "canvas";
 import { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
 import { adverbs, subjects, verbs } from "../../config/reason";
@@ -62,8 +62,7 @@ const createOgp = async (
   });
 
   ctx.fillRect(DX, DY, WIDTH, HEIGHT);
-  ctx.fillStyle = "#333c5f";
-  ctx.font = "100px ipagp";
+  ctx.fillStyle = "#454545";
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
 

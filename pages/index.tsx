@@ -125,7 +125,12 @@ const Home: NextPage = () => {
           boxShadow="base"
           position="relative"
         >
-          <Image src="/header.svg" w="full" mb={{ base: 4, lg: 8 }} />
+          <Image
+            src="/header.svg"
+            w="full"
+            mb={{ base: 4, lg: 8 }}
+            alt="header"
+          />
           <Flip text={selectedSubject} />
           <Flip text={selectedAdverb} />
           <Flip text={selectedVerb} />
