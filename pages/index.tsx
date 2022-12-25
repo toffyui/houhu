@@ -157,20 +157,20 @@ const Home: NextPage = () => {
             {selectedVerb.trim() && !isLoading && (
               <HStack>
                 <Button
-                  colorScheme="facebook"
-                  leftIcon={<FaFacebook />}
-                  onClick={() => window.open(snsUrl("FACEBOOK"), "_blank")}
-                  w="50%"
-                >
-                  シェア
-                </Button>
-                <Button
                   colorScheme="twitter"
                   leftIcon={<FaTwitter />}
                   onClick={() => window.open(snsUrl("TWITTER"), "_blank")}
                   w="50%"
                 >
                   ツイート
+                </Button>
+                <Button
+                  colorScheme="facebook"
+                  leftIcon={<FaFacebook />}
+                  onClick={() => window.open(snsUrl("FACEBOOK"), "_blank")}
+                  w="50%"
+                >
+                  シェア
                 </Button>
               </HStack>
             )}
