@@ -142,7 +142,7 @@ const Home: NextPage = () => {
           >
             ので休みます
           </Text>
-          <HStack>
+          <HStack flexDirection={{ base: "column", md: "row" }}>
             <Button
               onClick={onSelectHandler}
               colorScheme="teal"
@@ -150,17 +150,22 @@ const Home: NextPage = () => {
               isLoading={isLoading}
               loadingText="考え中.."
               spinnerPlacement="start"
-              w="50%"
+              w={{ base: "full", md: "50%" }}
+              mb={{ base: 2, md: 0 }}
+              mr={{ base: 0, md: 2 }}
             >
               サボる理由を考える
             </Button>
             {selectedVerb.trim() && !isLoading && (
-              <HStack>
+              <HStack
+                w={{ base: "full", md: "50%" }}
+                m={{ base: "0!important" }}
+              >
                 <Button
                   colorScheme="twitter"
                   leftIcon={<FaTwitter />}
                   onClick={() => window.open(snsUrl("TWITTER"), "_blank")}
-                  w="50%"
+                  w={{ base: "full", md: "50%" }}
                 >
                   ツイート
                 </Button>
@@ -168,7 +173,7 @@ const Home: NextPage = () => {
                   colorScheme="facebook"
                   leftIcon={<FaFacebook />}
                   onClick={() => window.open(snsUrl("FACEBOOK"), "_blank")}
-                  w="50%"
+                  w={{ base: "full", md: "50%" }}
                 >
                   シェア
                 </Button>
