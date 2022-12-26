@@ -1,17 +1,5 @@
 /* @see https://www.ui-components.com/Loader */
 
-.container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: #fdebc8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .loader5 {
   box-sizing: border-box;
   width: 1.2rem;
