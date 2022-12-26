@@ -35,7 +35,7 @@ const Flip: React.FC<Props> = ({ text }) => {
       <div data-repeat="true">
         <Text
           as="span"
-          fontSize={{ base: "xl", md: "2xl", lg: "3xl" }}
+          fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
           fontWeight="bold"
           borderRadius="none"
           marginY={1}

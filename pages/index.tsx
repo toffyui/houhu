@@ -43,10 +43,7 @@ const Home: NextPage = () => {
     }
   };
   const findNextIndex = (array: readonly string[], selected: string) => {
-    const selectedIndex = array.findIndex((_) => _ === selected);
-    if (selectedIndex === -1) return randomNumber(0, array.length - 1);
-    if (selectedIndex < array.length - 1) return selectedIndex + 1;
-    return 0;
+    return randomNumber(0, array.length - 1);
   };
 
   const onSelectHandler = () => {
