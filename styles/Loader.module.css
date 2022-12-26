@@ -20,7 +20,7 @@
   box-shadow: 0 -2rem 0 #eee, 1.4rem -1.4rem 0 #ddd, 2rem 0 0 #ccc,
     1.4rem 1.4rem 0 rgba(51, 60, 94, 0.2), 0 2rem 0 rgba(51, 60, 94, 0.4),
     -1.4rem 1.4rem 0 rgba(51, 60, 94, 0.6), -2rem 0 0 rgba(51, 60, 94, 0.8),
-    -1.4rem -1.4rem 0 #ff8429;
+    -1.4rem -1.4rem 0 #454545;
   animation: loader5 1s steps(8) 0s infinite;
   margin: 90px auto;
 }

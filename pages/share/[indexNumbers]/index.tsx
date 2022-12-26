@@ -3,7 +3,6 @@ import { GetServerSidePropsContext, GetServerSidePropsResult } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Loader from "../../../components/Loader";
-import useTranlate from "../../../hooks/useTranslate";
 
 type Props = {
   indexNumbers: string;
@@ -30,7 +29,7 @@ const Page = ({ indexNumbers }: Props) => {
   const router = useRouter();
   useEffect(() => {
     router.push("/");
-  }, []);
+  }, [router]);
 
   return (
     <>
