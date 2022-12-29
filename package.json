@@ -14,17 +14,13 @@
     "@emotion/react": "11.7.0",
     "@emotion/styled": "11.6.0",
     "@pqina/flip": "^1.7.7",
-    "@types/react-webcam": "^3.0.0",
     "canvas": "2.6.1",
     "clsx": "^1.1.1",
-    "face-api.js": "^0.22.2",
     "framer-motion": "5.3.3",
     "next": "11.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-icons": "^4.7.1",
-    "react-webcam": "^5.2.4",
-    "twemoji": "^13.1.0"
+    "react-icons": "^4.7.1"
   },
   "devDependencies": {
     "@types/react": "^17.0.16",
