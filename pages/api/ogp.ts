@@ -62,7 +62,7 @@ const createOgp = async (
   });
 
   ctx.fillRect(DX, DY, WIDTH, HEIGHT);
-  ctx.fillStyle = "#454545";
+  ctx.fillStyle = "#000000";
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
 
