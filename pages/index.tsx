@@ -69,13 +69,13 @@ const Home: NextPage = () => {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta property="og:url" content={process.env.NEXT_PUBLIC_BASE_URL} />
         <meta name="description" content="2023年の抱負が決まらないあなたに" />
-        <meta property="og:title" content="サボりたい" />
+        <meta property="og:title" content="抱負ツクール" />
         <meta property="og:type" content="website" />
         <meta
           property="og:description"
           content="2023年の抱負が決まらないあなたに"
         />
-        <meta property="og:site_name" content="サボりたい" />
+        <meta property="og:site_name" content="抱負ツクール" />
         <link rel="icon" href="/favicon.jpg" />
         <meta name="twitter:site" content="@yui_active" />
         <meta name="twitter:creator" content="@yui_active" />
