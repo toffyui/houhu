@@ -101,7 +101,8 @@ const Home: NextPage = () => {
         bgColor="orange.100"
         bgImage="url('/background.svg')"
         bgRepeat="repeat"
-        backgroundSize={{ base: "80%", md: "90%" }}
+        backgroundSize={{ base: "100%", md: "90%" }}
+        backgroundPosition="center"
       >
         <Container
           p={{ base: 4, lg: 8 }}
