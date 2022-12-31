@@ -12,24 +12,21 @@ import dynamic from "next/dynamic";
 import Head from "next/head";
 import { useState } from "react";
 import { FaFacebook, FaTwitter } from "react-icons/fa";
-import { adverbs, subjects, verbs } from "../config/reason";
+import { adverbs, verbs } from "../config/reason";
 import { randomNumber } from "../utils/randomNumber";
 
 const Flip = dynamic(() => import("../components/Flip"), { ssr: false });
 
 const Home: NextPage = () => {
-  const [selectedSubject, setSelectedSubject] = useState<string>("　　　");
   const [selectedAdverb, setSelectedAdverb] = useState<string>("　　　　　　");
   const [selectedVerb, setSelectedVerb] = useState<string>("　　　　　　　");
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const snsUrl = (type: "TWITTER" | "FACEBOOK") => {
-    const hash = `#サボりたい`;
-    const shareText = `${selectedSubject}${selectedAdverb}${selectedVerb}ので休みます`;
+    const hash = `#抱負ツクール`;
+    const shareText = `私は${selectedAdverb}${selectedVerb}ことを2023年の抱負にします！`;
     const shareUrl = `${
       process.env.NEXT_PUBLIC_BASE_URL
-    }/share/${subjects.findIndex(
-      (_) => _ === selectedSubject
-    )}-${adverbs.findIndex((_) => _ === selectedAdverb)}-${verbs.findIndex(
+    }/share/${adverbs.findIndex((_) => _ === selectedAdverb)}-${verbs.findIndex(
       (_) => _ === selectedVerb
     )}`;
     switch (type) {
@@ -49,18 +46,12 @@ const Home: NextPage = () => {
   const onSelectHandler = () => {
     setIsLoading(true);
     const stopTimer = randomNumber(1000, 2000);
-    const subjectInterval = setInterval(() => {
-      setSelectedSubject((old) => subjects[findNextIndex(subjects, old)]);
-    }, 100);
     const adverbInterval = setInterval(() => {
       setSelectedAdverb((old) => adverbs[findNextIndex(adverbs, old)]);
     }, 100);
     const verbInterval = setInterval(() => {
       setSelectedVerb((old) => verbs[findNextIndex(verbs, old)]);
     }, 100);
-    setTimeout(() => {
-      clearInterval(subjectInterval);
-    }, stopTimer);
     setTimeout(() => {
       clearInterval(adverbInterval);
     }, stopTimer * 1.1);
@@ -73,19 +64,16 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>サボりたい</title>
+        <title>抱負ツクール</title>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta property="og:url" content={process.env.NEXT_PUBLIC_BASE_URL} />
-        <meta
-          name="description"
-          content="絶対にサボってやるという強い意志をお持ちのあなたに"
-        />
+        <meta name="description" content="今年の抱負が決まらないあなたに" />
         <meta property="og:title" content="サボりたい" />
         <meta property="og:type" content="website" />
         <meta
           property="og:description"
-          content="絶対にサボってやるという強い意志をお持ちのあなたに"
+          content="今年の抱負が決まらないあなたに"
         />
         <meta property="og:site_name" content="サボりたい" />
         <link rel="icon" href="/favicon.jpg" />
@@ -128,7 +116,14 @@ const Home: NextPage = () => {
             mb={{ base: 4, lg: 8 }}
             alt="header"
           />
-          <Flip text={selectedSubject} />
+          <Text
+            fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
+            my={{ base: 2, lg: 4 }}
+            fontWeight="bold"
+            color="gray.700"
+          >
+            わたしは
+          </Text>
           <Flip text={selectedAdverb} />
           <Flip text={selectedVerb} />
           <Text
@@ -137,7 +132,7 @@ const Home: NextPage = () => {
             fontWeight="bold"
             color="gray.700"
           >
-            ので休みます
+            ことを今年の抱負にします
           </Text>
           <HStack flexDirection={{ base: "column", md: "row" }}>
             <Button
@@ -151,7 +146,7 @@ const Home: NextPage = () => {
               mb={{ base: 2, md: 0 }}
               mr={{ base: 0, md: 2 }}
             >
-              サボる理由を考える
+              抱負を考える
             </Button>
             {selectedVerb.trim() && !isLoading && (
               <HStack

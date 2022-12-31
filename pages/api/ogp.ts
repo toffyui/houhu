@@ -1,7 +1,7 @@
 import { Canvas, createCanvas, loadImage, registerFont } from "canvas";
 import { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
-import { adverbs, subjects, verbs } from "../../config/reason";
+import { adverbs, verbs } from "../../config/reason";
 
 interface SeparatedText {
   line: string;
@@ -47,9 +47,9 @@ const createOgp = async (
 ): Promise<void> => {
   const { indexNumbers } = req.query as { indexNumbers: string };
   const splitArray = indexNumbers.split("-");
-  const texts = `${subjects[Number(splitArray[0])]}${
-    adverbs[Number(splitArray[1])]
-  }${verbs[Number(splitArray[2])]}ので休みます`;
+  const texts = `${adverbs[Number(splitArray[0])]}${
+    verbs[Number(splitArray[1])]
+  }ことを2023年の抱負にします！`;
   const WIDTH = 1200 as const;
   const HEIGHT = 630 as const;
   const DX = 0 as const;
@@ -78,7 +78,7 @@ const createOgp = async (
     ctx.fillText(line, 600, y);
   });
   ctx.font = "40px ipagp";
-  ctx.fillText("#サボりたい", 780, 580);
+  ctx.fillText("#抱負ツクール", 780, 580);
 
   const buffer = canvas.toBuffer();
 
