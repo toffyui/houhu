@@ -47,7 +47,7 @@ const createOgp = async (
 ): Promise<void> => {
   const { indexNumbers } = req.query as { indexNumbers: string };
   const splitArray = indexNumbers.split("-");
-  const texts = `${adverbs[Number(splitArray[0])]}${
+  const texts = `私は${adverbs[Number(splitArray[0])]}${
     verbs[Number(splitArray[1])]
   }ことを2023年の抱負にします！`;
   const WIDTH = 1200 as const;
