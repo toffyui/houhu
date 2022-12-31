@@ -68,12 +68,12 @@ const Home: NextPage = () => {
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta property="og:url" content={process.env.NEXT_PUBLIC_BASE_URL} />
-        <meta name="description" content="今年の抱負が決まらないあなたに" />
+        <meta name="description" content="2023年の抱負が決まらないあなたに" />
         <meta property="og:title" content="サボりたい" />
         <meta property="og:type" content="website" />
         <meta
           property="og:description"
-          content="今年の抱負が決まらないあなたに"
+          content="2023年の抱負が決まらないあなたに"
         />
         <meta property="og:site_name" content="サボりたい" />
         <link rel="icon" href="/favicon.jpg" />
@@ -98,14 +98,14 @@ const Home: NextPage = () => {
       <Center
         w="full"
         minH="100vh"
-        bgColor="gray.200"
+        bgColor="orange.100"
         bgImage="url('/background.svg')"
         bgRepeat="repeat"
-        backgroundSize={{ base: "80%", md: "100%" }}
+        backgroundSize={{ base: "80%", md: "90%" }}
       >
         <Container
           p={{ base: 4, lg: 8 }}
-          bgColor="gray.200"
+          bgColor="orange.100"
           minH={{ base: "80vh", md: "100vh" }}
           boxShadow="base"
           position="relative"
@@ -120,7 +120,7 @@ const Home: NextPage = () => {
             fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
             my={{ base: 2, lg: 4 }}
             fontWeight="bold"
-            color="gray.700"
+            color="gray.900"
           >
             わたしは
           </Text>
@@ -130,14 +130,14 @@ const Home: NextPage = () => {
             fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
             my={{ base: 2, lg: 4 }}
             fontWeight="bold"
-            color="gray.700"
+            color="gray.900"
           >
-            ことを今年の抱負にします
+            ことを2023年の抱負にします
           </Text>
           <HStack flexDirection={{ base: "column", md: "row" }}>
             <Button
               onClick={onSelectHandler}
-              colorScheme="teal"
+              colorScheme="whatsapp"
               fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
               isLoading={isLoading}
               loadingText="考え中.."
@@ -172,7 +172,7 @@ const Home: NextPage = () => {
               </HStack>
             )}
           </HStack>
-          <Text fontSize="base" color="gray.800" position="absolute" bottom={8}>
+          <Text fontSize="base" color="gray.900" position="absolute" bottom={8}>
             &copy; {new Date().getFullYear()}{" "}
             <Link href="https://twitter.com/yui_active">yui</Link> All rights
             reserved.
