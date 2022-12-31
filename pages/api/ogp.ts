@@ -78,7 +78,7 @@ const createOgp = async (
     ctx.fillText(line, 600, y);
   });
   ctx.font = "40px ipagp";
-  ctx.fillText("#抱負ツクール", 780, 580);
+  ctx.fillText("#抱負ツクール", 820, 550);
 
   const buffer = canvas.toBuffer();
 
